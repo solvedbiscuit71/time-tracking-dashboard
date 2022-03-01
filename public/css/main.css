@@ -61,6 +61,10 @@ header .nav__element {
   color: #6f76c8;
   font-size: 1rem;
 }
+header .nav__element:hover {
+  color: #bdc1ff;
+  cursor: pointer;
+}
 header .nav__element--active {
   color: #bdc1ff;
 }
@@ -92,6 +96,10 @@ main .card__body {
   width: 100%;
   bottom: -2px;
 }
+main .card__body:hover {
+  background-color: #33387a;
+  cursor: pointer;
+}
 main .card__title {
   display: flex;
   flex-flow: row;
@@ -104,9 +112,8 @@ main .card__title h2 {
   font-size: 1.5rem;
   font-weight: 400;
 }
-main .card__title img {
-  fill: #6f76c8;
-  color: #6f76c8;
+main .card__title img:hover {
+  cursor: pointer;
 }
 main .card__info {
   display: flex;

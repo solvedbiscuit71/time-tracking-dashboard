@@ -13,6 +13,8 @@ $self-care-bg: hsl(43,84%,65%);
 $root-bg: hsl(226,43%,10%);
 $card-bg: hsl(235,46%,20%);
 
+$card-hover: hsl(236,41%,34%);
+
 $color-dark: hsl(235,45%,61%);
 $color-light: hsl(236,100%,87%);
 
@@ -92,6 +94,11 @@ header {
       font-size: 1rem;
     }
 
+    &__element:hover {
+      color: $color-light;
+      cursor: pointer;
+    }
+
     &__element--active {
       color: $color-light;
     }
@@ -133,6 +140,11 @@ main {
       bottom: -2px;
     }
 
+    &__body:hover {
+      background-color: $card-hover;
+      cursor: pointer;
+    }
+
     &__title {
       display: flex;
       flex-flow: row;
@@ -147,9 +159,8 @@ main {
         font-weight: 400;
       }
 
-      img {
-        fill: $color-dark;
-        color: $color-dark;
+      img:hover {
+        cursor: pointer;
       }
 
       margin-bottom: .5em;
