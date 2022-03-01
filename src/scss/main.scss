@@ -1,0 +1,207 @@
+/* font imports (Rubik) */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+/* Color Palette */
+
+$work-bg: hsl(15,100%,70%);
+$play-bg: hsl(195,74%,62%);
+$study-bg: hsl(348,100%,68%);
+$exercise-bg: hsl(145,58%,55%);
+$social-bg: hsl(264,64%,52%);
+$self-care-bg: hsl(43,84%,65%);
+
+$root-bg: hsl(226,43%,10%);
+$card-bg: hsl(235,46%,20%);
+
+$color-dark: hsl(235,45%,61%);
+$color-light: hsl(236,100%,87%);
+
+/* root element */
+
+*,*::before,*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-family: "Rubik";
+  font-size: 18px;
+  box-sizing: border-box;
+
+  background-color: $root-bg;
+}
+
+body {
+  margin-block: 5em;
+  margin-inline: 8vw;
+}
+
+/* mobile first approach */
+
+header {
+  width: 100%;
+
+  background-color: $card-bg;
+  border-radius: 10px;
+
+  .header {
+    background-color: hsl(246, 80%, 60%);
+    border-radius: 10px;
+
+    padding-block: 2em;
+    padding-inline: 1em;
+    display: flex;
+    flex-flow: row;
+    gap: 1em;
+
+    align-items: center;
+
+    &__img {
+      $img-dim: 4em;
+      
+      width: $img-dim;
+      height: $img-dim;
+
+      border: 3px solid white;
+      border-radius: 50%;
+    }
+
+    &__title {
+      font-weight: 300;
+      font-size: 1rem;
+      margin: 0;
+
+      color: rgba(160,149,255,255);
+
+      span {
+        display: block;
+        font-size: 1.375rem;
+
+        color: $color-light;
+      }
+    }
+  }
+
+  .nav {
+    display: flex;
+    justify-content: space-evenly;
+
+    padding-block: 1.5em;
+
+    &__element {
+      color: $color-dark;
+      font-size: 1rem;
+    }
+
+    &__element--active {
+      color: $color-light;
+    }
+  }
+
+  margin-bottom: 2em;
+}
+
+main {
+  display: grid;
+  gap: 2em;
+
+  /* default to zero */
+  h2 {
+    margin: 0;
+  }
+
+  .card {
+    width: 100%;
+
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-position: top -5% right 5%;
+
+    &__body {
+      margin-top: 2.5em;
+
+      background-color: $card-bg;
+      border-radius: 10px;
+
+      padding-block: 2em;
+      padding-inline: 1em;
+    }
+
+    &__title {
+      display: flex;
+      flex-flow: row;
+
+      justify-content: space-between;
+      align-items: center;
+
+      h2 {
+        color: $color-light;
+
+        font-size: 1.5rem;
+        font-weight: 400;
+      }
+
+      img {
+        fill: $color-dark;
+        color: $color-dark;
+      }
+
+      margin-bottom: .5em;
+    }
+
+    &__info {
+      display: flex;
+      flex-flow: row;
+
+      justify-content: space-between;
+      align-items: center;
+
+      &-hrs {
+        font-size: 2rem;
+        font-weight: 300;
+
+        color: $color-light;
+      }
+
+      &-last {
+        font-size: .85rem;
+        font-weight: 400;
+
+        color: $color-dark;
+      }
+    }
+
+    /* card modifiers */
+
+    &--work {
+      background-color: $work-bg;
+      background-image: url("../../images/icon-work.svg");
+    }
+
+    &--play {
+      background-color: $play-bg;
+      background-image: url("../../images/icon-play.svg");
+    }
+
+    &--study {
+      background-color: $study-bg;
+      background-image: url("../../images/icon-study.svg");
+    }
+
+    &--exercise {
+      background-color: $exercise-bg;
+      background-image: url("../../images/icon-exercise.svg");
+      background-position: top right 5%;
+    }
+
+    &--social {
+      background-color: $social-bg;
+      background-image: url("../../images/icon-social.svg");
+    }
+
+    &--self-care {
+      background-color: $self-care-bg;
+      background-image: url("../../images/icon-self-care.svg");
+    }
+
+  }
+}

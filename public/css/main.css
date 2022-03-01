@@ -1,0 +1,148 @@
+/* font imports (Rubik) */
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+/* Color Palette */
+/* root element */
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-family: "Rubik";
+  font-size: 18px;
+  box-sizing: border-box;
+  background-color: #0f1424;
+}
+
+body {
+  margin-block: 5em;
+  margin-inline: 8vw;
+}
+
+/* mobile first approach */
+header {
+  width: 100%;
+  background-color: #1c1f4a;
+  border-radius: 10px;
+  margin-bottom: 2em;
+}
+header .header {
+  background-color: #5847eb;
+  border-radius: 10px;
+  padding-block: 2em;
+  padding-inline: 1em;
+  display: flex;
+  flex-flow: row;
+  gap: 1em;
+  align-items: center;
+}
+header .header__img {
+  width: 4em;
+  height: 4em;
+  border: 3px solid white;
+  border-radius: 50%;
+}
+header .header__title {
+  font-weight: 300;
+  font-size: 1rem;
+  margin: 0;
+  color: #a095ff;
+}
+header .header__title span {
+  display: block;
+  font-size: 1.375rem;
+  color: #bdc1ff;
+}
+header .nav {
+  display: flex;
+  justify-content: space-evenly;
+  padding-block: 1.5em;
+}
+header .nav__element {
+  color: #6f76c8;
+  font-size: 1rem;
+}
+header .nav__element--active {
+  color: #bdc1ff;
+}
+
+main {
+  display: grid;
+  gap: 2em;
+  /* default to zero */
+}
+main h2 {
+  margin: 0;
+}
+main .card {
+  width: 100%;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-position: top -5% right 5%;
+  /* card modifiers */
+}
+main .card__body {
+  margin-top: 2.5em;
+  background-color: #1c1f4a;
+  border-radius: 10px;
+  padding-block: 2em;
+  padding-inline: 1em;
+}
+main .card__title {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5em;
+}
+main .card__title h2 {
+  color: #bdc1ff;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+main .card__title img {
+  fill: #6f76c8;
+  color: #6f76c8;
+}
+main .card__info {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+}
+main .card__info-hrs {
+  font-size: 2rem;
+  font-weight: 300;
+  color: #bdc1ff;
+}
+main .card__info-last {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: #6f76c8;
+}
+main .card--work {
+  background-color: #ff8c66;
+  background-image: url("../../images/icon-work.svg");
+}
+main .card--play {
+  background-color: #56c2e6;
+  background-image: url("../../images/icon-play.svg");
+}
+main .card--study {
+  background-color: #ff5c7c;
+  background-image: url("../../images/icon-study.svg");
+}
+main .card--exercise {
+  background-color: #4acf81;
+  background-image: url("../../images/icon-exercise.svg");
+  background-position: top right 5%;
+}
+main .card--social {
+  background-color: #7536d3;
+  background-image: url("../../images/icon-social.svg");
+}
+main .card--self-care {
+  background-color: #f1c65b;
+  background-image: url("../../images/icon-self-care.svg");
+}
+
+/*# sourceMappingURL=main.css.map */
