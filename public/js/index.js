@@ -2,12 +2,12 @@ const nav = [
   {
     name: "daily",
     element: document.querySelector(".nav .nav__element:nth-child(1)"),
-    isActive: true
+    isActive: false
   },
   {
     name: "weekly",
     element: document.querySelector(".nav .nav__element:nth-child(2)"),
-    isActive: false
+    isActive: true
   },
   {
     name: "monthly",
@@ -82,5 +82,5 @@ nav.forEach(item => {
   })
 })
 
-nav[0].element.classList.add("nav__element--active")
+nav[1].element.classList.add("nav__element--active")
 renderMain()
