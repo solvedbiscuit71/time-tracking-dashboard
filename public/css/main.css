@@ -60,6 +60,7 @@ header .nav {
 header .nav__element {
   color: #6f76c8;
   font-size: 1rem;
+  width: fit-content;
 }
 header .nav__element:hover {
   color: #bdc1ff;
@@ -121,12 +122,12 @@ main .card__info {
   justify-content: space-between;
   align-items: center;
 }
-main .card__info-hrs {
+main .card__info-current {
   font-size: 2rem;
   font-weight: 300;
   color: #bdc1ff;
 }
-main .card__info-last {
+main .card__info-previous {
   font-size: 0.85rem;
   font-weight: 400;
   color: #6f76c8;
