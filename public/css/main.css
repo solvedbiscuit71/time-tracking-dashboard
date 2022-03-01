@@ -78,6 +78,8 @@ main .card {
   border-radius: 10px;
   background-repeat: no-repeat;
   background-position: top -5% right 5%;
+  position: relative;
+  height: 200px;
   /* card modifiers */
 }
 main .card__body {
@@ -86,6 +88,9 @@ main .card__body {
   border-radius: 10px;
   padding-block: 2em;
   padding-inline: 1em;
+  position: absolute;
+  width: 100%;
+  bottom: -2px;
 }
 main .card__title {
   display: flex;
@@ -143,6 +148,65 @@ main .card--social {
 main .card--self-care {
   background-color: #f1c65b;
   background-image: url("../../images/icon-self-care.svg");
+}
+
+/* media query  (desktop) */
+@media only screen and (min-width: 1200px) {
+  body {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: "header main";
+    gap: 2em;
+    margin-block: 25vh;
+    margin-inline: 14.5vw;
+  }
+
+  header {
+    grid-area: "header";
+    margin: 0;
+  }
+  header .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2em;
+  }
+  header .header__title span {
+    font-size: 2rem;
+  }
+  header .nav {
+    padding-inline: 1em;
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  main {
+    grid-area: "main";
+    grid-template-columns: repeat(3, 1fr);
+  }
+  main .card {
+    background-position: top -6% right 5%;
+    /* card modifiers */
+  }
+  main .card__body {
+    padding-top: 1em;
+    padding-bottom: 2.8em;
+  }
+  main .card__title h2 {
+    font-size: 1rem;
+  }
+  main .card__title img {
+    width: 1em;
+  }
+  main .card__info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  main .card--exercise {
+    background-position: top right 5%;
+  }
+  main .card--social {
+    background-position: top -15% right 5%;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

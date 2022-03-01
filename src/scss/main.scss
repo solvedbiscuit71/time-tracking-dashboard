@@ -116,6 +116,9 @@ main {
     background-repeat: no-repeat;
     background-position: top -5% right 5%;
 
+    position: relative;
+    height: 200px;
+
     &__body {
       margin-top: 2.5em;
 
@@ -124,6 +127,10 @@ main {
 
       padding-block: 2em;
       padding-inline: 1em;
+
+      position: absolute;
+      width: 100%;
+      bottom: -2px;
     }
 
     &__title {
@@ -203,5 +210,83 @@ main {
       background-image: url("../../images/icon-self-care.svg");
     }
 
+  }
+}
+
+/* media query  (desktop) */
+
+@media only screen and (min-width: 1200px) {
+  body {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: 
+      "header main";
+
+    gap: 2em;
+
+    margin-block: 25vh;
+    margin-inline: 14.5vw;
+  }
+
+  header {
+    grid-area: "header";
+    margin: 0;
+
+    .header {
+      flex-direction: column;
+      align-items: flex-start;
+
+      gap: 2em;
+
+      &__title span {
+        font-size: 2rem;
+      }
+    }
+
+    .nav {
+      padding-inline: 1em;
+
+      flex-direction: column;
+      gap: 1em;
+    }
+  }
+
+  main {
+    grid-area: "main";
+    grid-template-columns: repeat(3,1fr);
+
+    .card {
+      background-position: top -6% right 5%;
+
+      &__body {
+        padding-top: 1em;
+        padding-bottom: 2.8em;
+      }
+
+      &__title {
+        h2 {
+          font-size: 1rem;
+        }
+
+        img {
+          width: 1em;
+        }
+      }
+
+      &__info {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      /* card modifiers */
+
+      &--exercise {
+        background-position: top right 5%;
+      }
+
+      &--social {
+        background-position: top -15% right 5%;
+      }
+    }
   }
 }
