@@ -1,6 +1,6 @@
 {
   "name": "time-tracking-dashboard",
-  "description": "This is a chanllenge from frontendmentor.io",
+  "description": "This is a challenge from frontendmentor.io",
   "main": "index.html",
   "scripts": {
     "dev": "lite-server",
